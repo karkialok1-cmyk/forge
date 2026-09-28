@@ -151,7 +151,7 @@ const PB={
 const DAYS=[1,2,3,5,6];
 const WNA={1:"Week 1: stop at the top of each RIR range and find your working weights.",2:"Week 2: same sets. Beat last week's reps with the same form.",3:"Week 3: an extra set on the chest fly and first arm exercise. Work at the bottom of each RIR range.",4:"Week 4: same as week 3. Work at the bottom of each RIR range.",5:"Week 5: peak week. An extra set on the second chest press too, and isolations go to 0 RIR.",6:"Week 6: DELOAD. Half the sets (rounded up), same weights, stop with 4+ reps left. Don't chase numbers."};
 const WNB={1:"Week 1: stop every set with about 2 reps left and find your working weights. Finish with the cardio if there's time.",2:"Week 2: same sets. Beat last week's reps with the same form.",3:"Week 3: an extra set on rows, lateral raises and triceps. Work at 1–2 reps left.",4:"Week 4: same as week 3. Work at 1–2 reps left.",5:"Week 5: peak week. Isolation exercises go to 0–1 reps left.",6:"Week 6: DELOAD. Half the sets (rounded up), same weights, stop with 4+ reps left. Easy cardio only."};
-const NM=JSON.parse(localStorage.getItem("forge_names")||"null")||{a:"Alok",b:"Punam"};if(NM.b==="Her")NM.b="Punam";
+const NM=JSON.parse(localStorage.getItem("forge_names")||"null")||{a:"Bro split",b:"Pull push"};if(!localStorage.getItem("forge_nm2")){if(NM.a==="Alok")NM.a="Bro split";if(NM.b==="Punam"||NM.b==="Her")NM.b="Pull push";localStorage.setItem("forge_names",JSON.stringify(NM));localStorage.setItem("forge_nm2","1")}
 const PROFS={a:{P:PA,WN:WNA,sub:"chest &amp; arms focus",warm:"Warm up from 6:00 to 6:08, with 2–3 ramp-up sets on the first lift only."},b:{P:PB,WN:WNB,sub:"fat loss · lean muscle",warm:"Warm up from 6:00 to 6:05, with 2 ramp-up sets on the first lift. If time runs short, drop the cardio first. Leg days: stop the set if you feel sharp pain, catching or locking in a knee."}};
 let PROF=localStorage.getItem("forge_prof")||"a";if(!PROFS[PROF])PROF="a";
 let P,WN;const PF=()=>PROF==="a"?"forge_":"forge_b_";
@@ -161,8 +161,8 @@ function loadProf(){P=PROFS[PROF].P;WN=PROFS[PROF].WN;st=LS("st")||{w:1,d:1,tab:
 loadProf();
 function save(){const p=PF();localStorage.setItem(p+"st",JSON.stringify(st));localStorage.setItem(p+"log",JSON.stringify(log));localStorage.setItem(p+"hist",JSON.stringify(hist));localStorage.setItem(p+"chk",JSON.stringify(chk))}
 function setProf(p){PROF=p;localStorage.setItem("forge_prof",p);stopT();loadProf();window.scrollTo(0,0);render()}
-function renameB(){const n=prompt("Name for this profile:",NM.b);if(n&&n.trim()){NM.b=n.trim().slice(0,20);localStorage.setItem("forge_names",JSON.stringify(NM));render()}}
-function profHdr(){document.getElementById("profsel").innerHTML=["a","b"].map(p=>`<button class="chip ${PROF===p?"on":""}" onclick="setProf('${p}')">👤 ${NM[p]}</button>`).join("")+(PROF==="b"?`<button class="chip" onclick="renameB()">✎ Rename</button>`:"");document.getElementById("sub").innerHTML=PROFS[PROF].sub;document.getElementById("ttl").textContent="FORGE · "+NM[PROF]}
+function renameB(){const n=prompt("Name for this profile:",NM[PROF]);if(n&&n.trim()){NM[PROF]=n.trim().slice(0,20);localStorage.setItem("forge_names",JSON.stringify(NM));render()}}
+function profHdr(){document.getElementById("profsel").innerHTML=["a","b"].map(p=>`<button class="chip ${PROF===p?"on":""}" onclick="setProf('${p}')">👤 ${NM[p]}</button>`).join("")+`<button class="chip" onclick="renameB()">✎ Rename</button>`;document.getElementById("sub").innerHTML=PROFS[PROF].sub;document.getElementById("ttl").textContent="FORGE · "+NM[PROF]}
 function nsets(e,w){let s=e.s;if(w>=3&&w<=5&&e.w3)s+=e.w3;if(w===5&&e.w5)s+=e.w5;if(w===6)s=Math.ceil(s/2);return s}
 function rir(e,w){if(w===6)return"4+";if(!e.rir)return"–";if(w<=2)return e.rir[0];if(w===5&&e.t==="i"&&!e.cap)return 0;return e.rir[1]}
 function K(w,d,i,k){return w+"|"+d+"|"+i+"|"+k}
