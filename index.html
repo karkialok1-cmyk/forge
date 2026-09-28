@@ -151,7 +151,7 @@ const PB={
 const DAYS=[1,2,3,5,6];
 const WNA={1:"Week 1: stop at the top of each RIR range and find your working weights.",2:"Week 2: same sets. Beat last week's reps with the same form.",3:"Week 3: an extra set on the chest fly and first arm exercise. Work at the bottom of each RIR range.",4:"Week 4: same as week 3. Work at the bottom of each RIR range.",5:"Week 5: peak week. An extra set on the second chest press too, and isolations go to 0 RIR.",6:"Week 6: DELOAD. Half the sets (rounded up), same weights, stop with 4+ reps left. Don't chase numbers."};
 const WNB={1:"Week 1: stop every set with about 2 reps left and find your working weights. Finish with the cardio if there's time.",2:"Week 2: same sets. Beat last week's reps with the same form.",3:"Week 3: an extra set on rows, lateral raises and triceps. Work at 1–2 reps left.",4:"Week 4: same as week 3. Work at 1–2 reps left.",5:"Week 5: peak week. Isolation exercises go to 0–1 reps left.",6:"Week 6: DELOAD. Half the sets (rounded up), same weights, stop with 4+ reps left. Easy cardio only."};
-const NM=JSON.parse(localStorage.getItem("forge_names")||"null")||{a:"Alok",b:"Her"};
+const NM=JSON.parse(localStorage.getItem("forge_names")||"null")||{a:"Alok",b:"Punam"};if(NM.b==="Her")NM.b="Punam";
 const PROFS={a:{P:PA,WN:WNA,sub:"chest &amp; arms focus",warm:"Warm up from 6:00 to 6:08, with 2–3 ramp-up sets on the first lift only."},b:{P:PB,WN:WNB,sub:"fat loss · lean muscle",warm:"Warm up from 6:00 to 6:05, with 2 ramp-up sets on the first lift. If time runs short, drop the cardio first."}};
 let PROF=localStorage.getItem("forge_prof")||"a";if(!PROFS[PROF])PROF="a";
 let P,WN;const PF=()=>PROF==="a"?"forge_":"forge_b_";
