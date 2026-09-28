@@ -116,13 +116,11 @@ const PA={
 };
 const PB={
 1:{name:"Lower body",ex:[
- {n:"Smith machine squat",id:"Smith_Machine_Squat",s:3,r:[6,10],rir:[2,2],rs:150,t:"c",inc:2.5,kt:"Knee-heavy: always 2 reps in reserve, even in week 5. If the knee bothers her today, swap to a goblet squat down to a knee-height box, touching it lightly (raise the box if the bottom hurts)."},
- {n:"Romanian deadlift (barbell)",id:"Romanian_Deadlift",s:3,r:[8,10],rir:[2,1],rs:120,t:"c",inc:2.5,kt:"Soft, fixed knee bend. Both feet flat and evenly loaded, no rolling onto the outside of the left foot."},
- {n:"Barbell hip thrust",id:"Barbell_Hip_Thrust",s:3,r:[8,10],rir:[2,1],rs:120,t:"c",inc:5,kt:"Hip-only, easy on the knee. Feet flat and evenly loaded."},
- {n:"Reverse lunge (dumbbells)",id:"Dumbbell_Rear_Lunge",s:2,r:[8,12],rir:[2,2],rs:90,t:"c",inc:1,lr:"reps/leg",
-  how:["Stand tall with dumbbells at your sides and your feet hip-width apart.","Step one foot back and lower over 2 to 3 seconds, keeping most of your weight on the front heel.","Go down until your back knee is a few centimetres off the floor, with your front knee over your mid-foot and in line with your toes.","Push through your front heel to bring your back foot in, then do the next rep. Finish all the reps on one leg before switching."],
-  kt:"Always 2 reps in reserve. With the left leg in front, stop higher and hold a rack for balance. If it bothers the knee today, do extra hip thrust sets instead."},
- {n:"Bike intervals: 30 s hard, 60 s easy",id:"Bicycling_Stationary",s:1,r:[6,6],rs:0,t:"i",x:1,lk:"level",lr:"rounds",kt:"Seat high enough that the knee is almost straight at the bottom. Stay seated."}]},
+ {n:"Smith machine squat",id:"Smith_Machine_Squat",s:3,r:[6,10],rir:[2,1],rs:150,t:"c",inc:2.5},
+ {n:"Romanian deadlift (barbell)",id:"Romanian_Deadlift",s:3,r:[8,10],rir:[2,1],rs:120,t:"c",inc:2.5},
+ {n:"Barbell hip thrust",id:"Barbell_Hip_Thrust",s:3,r:[8,10],rir:[2,1],rs:120,t:"c",inc:5},
+ {n:"Reverse lunge (dumbbells)",id:"Dumbbell_Rear_Lunge",s:2,r:[8,12],rir:[2,1],rs:90,t:"c",inc:1,lr:"reps/leg"},
+ {n:"Bike intervals: 30 s hard, 60 s easy",id:"Bicycling_Stationary",s:1,r:[6,6],rs:0,t:"i",x:1,lk:"level",lr:"rounds"}]},
 2:{name:"Upper body",ex:[
  {n:"Lat pulldown",id:"Wide-Grip_Lat_Pulldown",s:3,r:[6,10],rir:[2,1],rs:120,t:"c",inc:2.5},
  {n:"Dumbbell bench press",id:"Dumbbell_Bench_Press",s:3,r:[6,10],rir:[2,1],rs:120,t:"c",inc:2},
@@ -131,23 +129,17 @@ const PB={
  {n:"Triceps pushdown (rope)",id:"Triceps_Pushdown_-_Rope_Attachment",s:3,r:[12,15],rir:[1,0],rs:75,t:"i",g:"A",w3:1},
  {n:"Incline treadmill walk",id:"Walking_Treadmill",s:1,r:[10,10],rs:0,t:"i",x:1,lk:"incline %",lr:"min"}]},
 3:{name:"Full body",ex:[
- {n:"Leg press (feet high, shoulder-width)",id:"Leg_Press",s:3,r:[10,15],rir:[2,2],rs:120,t:"c",inc:5,
-  how:["Sit with your back flat against the pad and place your feet high on the platform, shoulder-width apart, toes turned out slightly.","Release the safeties and lower the platform slowly, keeping your knees in line with your toes the whole way (no caving in or bowing out).","Stop at a 90° knee bend or earlier.","Press back up through your whole foot and stop just short of locking your knees."],
-  kt:"Knee-heavy: always 2 reps in reserve, even in week 5. Stop at 90° or earlier."},
+ {n:"Leg press",id:"Leg_Press",s:3,r:[10,15],rir:[2,1],rs:120,t:"c",inc:5},
  {n:"Push-up (hands on a bench if needed)",id:"Incline_Push-Up",s:3,r:[8,15],rir:[2,1],rs:90,t:"i",nosug:1,lk:"kg (blank)",tip:"Once every set reaches 15 reps, use a lower bench (or the floor) next time."},
  {n:"Chest-supported row",id:"Dumbbell_Incline_Row",s:3,r:[10,12],rir:[2,1],rs:90,t:"c",inc:2,w3:1},
  {n:"Farmer's carry",id:"Farmers_Walk",s:3,r:[30,40],rir:[2,1],rs:90,t:"c",inc:2,lk:"kg/hand",lr:"metres",np:1},
  {n:"Dead bug",id:"Dead_Bug",s:3,r:[10,10],rs:45,t:"i",x:1,lk:"—",lr:"reps/side"}]},
 5:{name:"Lower body 2",ex:[
- {n:"Bulgarian split squat (dumbbells)",id:"Split_Squat_with_Dumbbells",s:3,r:[8,12],rir:[2,2],rs:90,t:"c",inc:2,lr:"reps/leg",
-  how:["Put your rear foot on a bench and step the front foot far enough forward that the front shin stays fairly upright.","Lean your torso forward slightly and lower over 2 to 3 seconds until your back knee nearly touches the floor.","Drive up through your front heel. Finish one leg, then switch."],
-  kt:"Always 2 reps in reserve. With the left leg in front, stop well short of the floor and hold something for balance. If it bothers the knee today, swap to 45° back extensions (squeeze the glutes to come up)."},
- {n:"Seated leg curl",id:"Seated_Leg_Curl",s:3,r:[10,15],rir:[1,1],rs:90,t:"i",cap:1,
-  how:["Set the back pad so your knees line up with the machine's pivot, and the lower pad sits just above your heels.","Curl the pad down and back smoothly, without jerking.","Stop before a deep bend or any pinch behind the knee, then return over 2 to 3 seconds."],
-  kt:"A shorter range is fine. Stays 1 rep short of failure, even in week 5."},
- {n:"Cable pull-through",id:"Pull_Through",s:3,r:[12,15],rir:[2,1],rs:75,t:"i",kt:"Knees softly bent and still. The movement comes from the hips, so this is safe on the knee."},
- {n:"Hip abduction machine",id:"Thigh_Abductor",s:2,r:[15,20],rir:[1,0],rs:60,t:"i",kt:"No knee load. Stronger glutes help the knee track straight on squats and lunges."},
- {n:"Rower intervals: 30 s hard, 60 s easy",id:"Rowing_Stationary",s:1,r:[6,6],rs:0,t:"i",x:1,lk:"level",lr:"rounds",kt:"Stop the slide before your knees fully bend at the front of the stroke. If it still bothers the knee, use the bike."}]},
+ {n:"Bulgarian split squat (dumbbells)",id:"Split_Squat_with_Dumbbells",s:3,r:[8,12],rir:[2,1],rs:90,t:"c",inc:2,lr:"reps/leg"},
+ {n:"Seated leg curl",id:"Seated_Leg_Curl",s:3,r:[10,15],rir:[1,0],rs:90,t:"i"},
+ {n:"Cable pull-through",id:"Pull_Through",s:3,r:[12,15],rir:[2,1],rs:75,t:"i"},
+ {n:"Hip abduction machine",id:"Thigh_Abductor",s:2,r:[15,20],rir:[1,0],rs:60,t:"i"},
+ {n:"Rower intervals: 30 s hard, 60 s easy",id:"Rowing_Stationary",s:1,r:[6,6],rs:0,t:"i",x:1,lk:"level",lr:"rounds"}]},
 6:{name:"Upper body & arms",ex:[
  {n:"Seated dumbbell shoulder press",id:"Dumbbell_Shoulder_Press",s:3,r:[6,10],rir:[2,1],rs:120,t:"c",inc:2},
  {n:"Assisted pull-up",id:"Band_Assisted_Pull-Up",s:3,r:[6,10],rir:[2,1],rs:120,t:"c",nosug:1,lk:"assist kg",tip:"Progress here means LESS assistance. Once every set reaches 10 reps, drop the assist one step."},
@@ -160,7 +152,7 @@ const DAYS=[1,2,3,5,6];
 const WNA={1:"Week 1: stop at the top of each RIR range and find your working weights.",2:"Week 2: same sets. Beat last week's reps with the same form.",3:"Week 3: an extra set on the chest fly and first arm exercise. Work at the bottom of each RIR range.",4:"Week 4: same as week 3. Work at the bottom of each RIR range.",5:"Week 5: peak week. An extra set on the second chest press too, and isolations go to 0 RIR.",6:"Week 6: DELOAD. Half the sets (rounded up), same weights, stop with 4+ reps left. Don't chase numbers."};
 const WNB={1:"Week 1: stop every set with about 2 reps left and find your working weights. Finish with the cardio if there's time.",2:"Week 2: same sets. Beat last week's reps with the same form.",3:"Week 3: an extra set on rows, lateral raises and triceps. Work at 1–2 reps left.",4:"Week 4: same as week 3. Work at 1–2 reps left.",5:"Week 5: peak week. Isolation exercises go to 0–1 reps left.",6:"Week 6: DELOAD. Half the sets (rounded up), same weights, stop with 4+ reps left. Easy cardio only."};
 const NM=JSON.parse(localStorage.getItem("forge_names")||"null")||{a:"Alok",b:"Punam"};if(NM.b==="Her")NM.b="Punam";
-const PROFS={a:{P:PA,WN:WNA,sub:"chest &amp; arms focus",warm:"Warm up from 6:00 to 6:08, with 2–3 ramp-up sets on the first lift only."},b:{P:PB,WN:WNB,sub:"fat loss · lean muscle",warm:"Warm up from 6:00 to 6:05, with 2 ramp-up sets on the first lift. If time runs short, drop the cardio first. LEFT KNEE: knee-heavy lifts stay at 2 reps in reserve, even in week 5. If an exercise causes pain, catching, clicking or locking today, use the swap in its 🦵 note or skip it."}};
+const PROFS={a:{P:PA,WN:WNA,sub:"chest &amp; arms focus",warm:"Warm up from 6:00 to 6:08, with 2–3 ramp-up sets on the first lift only."},b:{P:PB,WN:WNB,sub:"fat loss · lean muscle",warm:"Warm up from 6:00 to 6:05, with 2 ramp-up sets on the first lift. If time runs short, drop the cardio first. Leg days: stop the set if you feel sharp pain, catching or locking in a knee."}};
 let PROF=localStorage.getItem("forge_prof")||"a";if(!PROFS[PROF])PROF="a";
 let P,WN;const PF=()=>PROF==="a"?"forge_":"forge_b_";
 const LS=k=>JSON.parse(localStorage.getItem(PF()+k)||"null");
@@ -193,7 +185,7 @@ function hdr(){const h=document.getElementById("hdrsel");if(st.tab!=="w"){h.inne
 function vWorkout(){
  const w=st.w,d=st.d,day=P[d],lb=labels(day.ex);
  let h=`<div class="note">${WN[w]}<br>Days 4 and 7 are rest days. ${PROFS[PROF].warm} Tap ✓ when a set is done to start the rest timer.</div>`;
- day.ex.forEach((e,i)=>{const x=EX[e.id]||{img:[],muscles:[],steps:[]},n=nsets(e,w),p=prevWeek(w,d,i),key=d+"-"+i;
+ day.ex.forEach((e,i)=>{const x0=EX[e.id]||{img:[],muscles:[],steps:[]},x=PROF==="b"&&e.pics?{...x0,img:e.pics.map(k=>x0.img[k]).filter(Boolean)}:x0,n=nsets(e,w),p=prevWeek(w,d,i),key=d+"-"+i;
   const rest=e.rs?(e.rs>=120?Math.round(e.rs/60*2)/2+" min":e.rs+" s"):e.g?"go straight to "+lb[i].replace(/1$/,"2"):"none";
   h+=`<div class="ex ${e.g?"ss":""}"><div class="exhead"><img class="thumb" src="${x.img[0]||""}" onclick="tog('pic','${key}')">
   <div><h3>${lb[i]?`<span class="lbl">${lb[i]}</span>`:""}${e.n}</h3>
@@ -259,7 +251,7 @@ function addT(s){tend+=s*1000;tick()}
 function stopT(){clearInterval(T);document.getElementById("timerbar").classList.remove("show")}
 function tick(){const r=Math.max(0,Math.round((tend-Date.now())/1000));document.getElementById("tval").textContent=Math.floor(r/60)+":"+String(r%60).padStart(2,"0");if(r===0){clearInterval(T);if(navigator.vibrate)navigator.vibrate([300,150,300]);document.getElementById("tval").textContent="Go!";setTimeout(stopT,4000)}}
 function go(t){st.tab=t;save();window.scrollTo(0,0);render()}
-function render(top=true){profHdr();hdr();const m=document.getElementById("main");const y=window.scrollY;m.innerHTML=st.tab==="h"?vHist():st.tab==="p"?vProg():st.tab==="c"?vChk():vWorkout();["w","h","p","c"].forEach(t=>document.getElementById("n-"+t).classList.toggle("on",st.tab===t));if(!top)window.scrollTo(0,y)}
+function render(top=true){profHdr();hdr();const m=document.getElementById("main");const y=window.scrollY;m.innerHTML=st.tab==="h"?vHist():st.tab==="p"?vProg():st.tab==="c"?vChk():vWorkout();["w","h","p","c"].forEach(t=>document.getElementById("n-"+t).classList.toggle("on",st.tab===t));if(!top)window.scrollTo(0,y);document.querySelectorAll(".scroll .chip.on").forEach(c=>{const s=c.parentElement;s.scrollLeft=c.offsetLeft-s.offsetLeft-(s.clientWidth-c.offsetWidth)/2})}
 render();
 if("serviceWorker" in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("sw.js").catch(()=>{});
 </script>
